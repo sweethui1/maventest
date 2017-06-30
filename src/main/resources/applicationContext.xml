@@ -21,7 +21,7 @@
     <context:property-placeholder location="config/local.properties" ignore-unresolvable="true"/>
 
     <!--配置数据源-->
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    <bean id="dataSourceFactory" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="${wgapp.driver}"/>
         <property name="jdbcUrl" value="${wgapp.url}"/>
         <property name="user" value="${wgapp.username}"/>
@@ -40,5 +40,5 @@
         <property name="testConnectionOnCheckout" value="${proxool.testConnectionOnCheckout}" />
     </bean>
 
-
+    <!--<import resource="config/spring-quratz.xml"/>-->
 </beans>
