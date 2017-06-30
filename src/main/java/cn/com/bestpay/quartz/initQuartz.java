@@ -3,6 +3,7 @@ package cn.com.bestpay.quartz;
 import org.apache.log4j.Logger;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 

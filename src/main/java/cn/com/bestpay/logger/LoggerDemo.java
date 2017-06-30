@@ -19,7 +19,7 @@ public class LoggerDemo {
 
  class test{
      public static void main(String[] args) {
-         initServer.init();
+//         initServer.init();
          LoggerDemo log = new LoggerDemo();
          log.logTest();
 
