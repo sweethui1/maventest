@@ -17,6 +17,10 @@ public class test {
 
             //如果文件不知道有多大，需要判断是否读到文件末尾
 
+
+
+
+
             byte [] b = new byte [1024];
             int count = 0;
             int temp = 0;
