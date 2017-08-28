@@ -41,4 +41,5 @@
     </bean>
 
     <!--<import resource="config/spring-quratz.xml"/>-->
+    <import resource="classpath:config/dubbo-provider.xml"/>
 </beans>
