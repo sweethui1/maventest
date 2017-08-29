@@ -1,8 +1,10 @@
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Created by wanghui on 2017/8/28.
  */
+@Slf4j
 public class dubboTest {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"applicationContext.xml"});

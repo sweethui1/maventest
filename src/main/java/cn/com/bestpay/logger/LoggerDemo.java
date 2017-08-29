@@ -1,11 +1,13 @@
 package cn.com.bestpay.logger;
 
 import cn.com.bestpay.server.initServer;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.LoggerFactory;
 
 /**
  * Created by user on 2017/1/23.
  */
+@Slf4j
 public class LoggerDemo {
 //    public static Logger log  = Logger.getLogger(LoggerDemo.class);
     org.slf4j.Logger logger = LoggerFactory.getLogger(LoggerDemo.class);
@@ -13,6 +15,7 @@ public class LoggerDemo {
     public void logTest() {
         logger.info("this is a message");
         logger.info("hi welcome {},today is {}","admin","sunday");
+        log.info("hello,{}","wanghui");
     }
 
 }

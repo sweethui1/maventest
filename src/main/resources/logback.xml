@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
-    <timestamp key="bySecond" datePattern="yyyyMMddHHmmss"/>
+    <timestamp key="bySecond" datePattern="yyyy-MM-dd"/>
 
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>D:/logs/file-${bySecond}.log</file>
-        <append>true</append>
-        <encoder>
-            <pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%thread] [%-5level] %logger %line -%msg%n</pattern>
-        </encoder>
-    </appender>
-<!---->
+    <!--<appender name="FILE" class="ch.qos.logback.core.FileAppender">-->
+        <!--<file>D:/logs/file-${bySecond}.log</file>-->
+        <!--<append>true</append>-->
+        <!--<encoder>-->
+            <!--<pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%thread] [%-5level] %logger %line -%msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+
+<!--FileAppender 与RollingFileAppender 无法一起使用，-->
     <appender name="DAYFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 设置日志不超过maxFileSize时的保存路径，注意如果 是web项目会保存到Tomcat的bin目录 下 -->
-        <file>logFile.log</file>
+        <file>D:/logs/logFile-${bySecond}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>D:/logs/logFile-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
             <maxHistory>30</maxHistory>
@@ -24,6 +25,7 @@
         <encoder>
             <pattern> [%date{yyyy-MM-dd HH:mm:ss}] [%thread] [%-5level] %logger %line -%msg%n</pattern>
         </encoder>
+        <append>true</append>
     </appender>
 
     <!--控制台打印-->

@@ -7,14 +7,13 @@
        http://code.alibabatech.com/schema/dubbo
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <!--<bean id="helloService" class="cn.com.bestpay.dubbo.service.serviceimpl.HelloServiceImpl"/>-->
 
     <dubbo:application name="hello-provider"/>
 
     <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
 
-    <dubbo:protocol name="dubbo"  port="20880"/>
+    <dubbo:reference id="helloService" interface="cn.com.bestpay.dubbo.service.HelloService"/>
 
-    <dubbo:service interface="cn.com.bestpay.dubbo.service.HelloService" ref="helloService"/>
+    <!--<dubbo:service interface="cn.com.bestpay.dubbo.service.HelloService" ref="helloService"/>-->
 
 </beans>
